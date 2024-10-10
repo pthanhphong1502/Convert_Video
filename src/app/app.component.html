@@ -1,0 +1,21 @@
+<div class="container">
+  <h2>Upload MP4 and Convert to Base64</h2>
+  <input type="file" (change)="onFileSelected($event)" accept="video/mp4">
+  <button (click)="convertToBase64()" [disabled]="!file">Convert to Base64</button>
+
+  <div>
+    <h3>Base64 Output:</h3>
+    <textarea cols="80" rows="10">{{ base64String }}</textarea>
+    <button (click)="downloadBase64AsTxt()">Download as TXT</button>
+  </div>
+</div>
+
+<div class="container">
+  <div>Hihihi</div>
+  <h2>Upload Base64 Text File and Convert to MP4</h2>
+  <input type="file" (change)="onFileTxtSelected($event)" accept=".txt">
+  <br />
+  <button (click)="convertToMP4()">Convert to MP4</button>
+</div>
+
+
